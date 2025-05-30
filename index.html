@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vynix - AI Film Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Vynix</div>
+        <div class="nav">
+            <a href="#" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Explore</a>
+            <a href="#" class="nav-link">Community</a>
+            <a href="#" class="nav-link">Docs</a>
+        </div>
+        <div class="profile-nav">
+            <a href="#" class="nav-link" onclick="showPage('profile')">Profile</a>
+            <a href="#" class="nav-link" onclick="showPage('search')">Search</a>
+            <a href="#" class="nav-link" onclick="showPage('favorites')">Favorites</a>
+            <a href="#" class="nav-link" onclick="showPage('notifications')">Notifications</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Banner with Trending Films -->
+        <section class="banner">
+            <div class="trending-slider">
+                <div class="trending-film" style="background-image: url('https://via.placeholder.com/1200x600?text=AI+Film+1');">
+                    <div class="play-btn">Watch Now</div>
+                </div>
+                <div class="trending-film" style="background-image: url('https://via.placeholder.com/1200x600?text=AI+Film+2');">
+                    <div class="play-btn">Watch Now</div>
+                </div>
+                <div class="trending-film" style="background-image: url('https://via.placeholder.com/1200x600?text=AI+Film+3');">
+                    <div class="play-btn">Watch Now</div>
+                </div>
+            </div>
+            <div class="trailer-container">
+                <video id="trailer-video" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <!-- Movie Categories -->
+        <section class="movie-categories">
+            <h2>Fantasy</h2>
+            <div class="movie-slider" id="fantasy-slider"></div>
+
+            <h2>AI</h2>
+            <div class="movie-slider" id="ai-slider"></div>
+
+            <h2>Technology</h2>
+            <div class="movie-slider" id="tech-slider"></div>
+        </section>
+    </main>
+
+    <!-- Profile Page -->
+    <div class="profile-page page" id="profile">
+        <h2>Profile</h2>
+        <div class="subscription-options">
+            <div class="subscription free">Free + Ads</div>
+            <div class="subscription premium">
+                <small>Ad-Free, Downloadable, Offline with Google</small>
+                <div>Premium</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Page -->
+    <div class="search-page page" id="search">
+        <h2>Search Films</h2>
+        <input type="text" id="search-input" placeholder="Search for AI films...">
+        <div id="search-results" class="movie-slider"></div>
+    </div>
+
+    <!-- Favorites Page -->
+    <div class="favorites-page page" id="favorites">
+        <h2>Favorites</h2>
+        <div id="favorites-list" class="movie-list"></div>
+    </div>
+
+    <!-- Notifications Page -->
+    <div class="notifications-page page" id="notifications">
+        <h2>Notifications</h2>
+        <div id="notifications-list"></div>
+    </div>
+
+    <!-- Disclaimer Popup -->
+    <div class="disclaimer-popup" id="disclaimer">
+        <div class="disclaimer-content">
+            <h3>Welcome to Vynix</h3>
+            <p>Vynix is a platform in its early stage for AI-specific films. Currently, AI films are limited, and Vynix can only display a few. Once there are more AI films, Vynix will store them. Ads help support Vynix's development—thank you!</p>
+            <button onclick="closeDisclaimer()">Got It</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
